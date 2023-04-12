@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_selectAgeFragment"
+            app:destination="@id/selectAgeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAgeFragment"
+        android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.SelectAgeFragment"
+        android:label="fragment_select_age"
+        tools:layout="@layout/fragment_select_age" >
+        <action
+            android:id="@+id/action_selectAgeFragment_to_calculateFragment"
+            app:destination="@id/calculateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculateFragment"
+        android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.CalculateFragment"
+        android:label="fragment_calculate"
+        tools:layout="@layout/fragment_calculate" >
+        <action
+            android:id="@+id/action_calculateFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_calculateFragment"
+            app:destination="@id/calculateFragment" />
+    </fragment>
+</navigation>
