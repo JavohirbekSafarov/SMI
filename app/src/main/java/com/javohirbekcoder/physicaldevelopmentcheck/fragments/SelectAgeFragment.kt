@@ -30,6 +30,9 @@ class SelectAgeFragment : Fragment(R.layout.fragment_select_age) {
             bundle.putInt("age", 7)
             findNavController().navigate(R.id.action_selectAgeFragment_to_calculateFragment, bundle)
         }
+        binding.infoLayout.setOnClickListener {
+            findNavController().navigate(R.id.action_selectAgeFragment_to_infoFragment)
+        }
         return binding.root
     }
 }

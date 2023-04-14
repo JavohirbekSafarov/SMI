@@ -10,5 +10,6 @@
 
     <color name="primary_color">#00A24E</color>
     <color name="primary_lighter_color">#01d23d</color>
+    <color name="status_bar_color">#C600A24E</color>
 
 </resources>

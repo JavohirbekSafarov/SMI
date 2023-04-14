@@ -28,7 +28,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
             lifecycleScope.launchWhenResumed {
                 findNavController().navigate(R.id.action_splashFragment_to_selectAgeFragment)
             }
-        }, 1000)
+        }, 2400)
 
         return binding.root
     }

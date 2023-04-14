@@ -9,10 +9,14 @@
         android:id="@+id/splashFragment"
         android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_selectAgeFragment"
             app:destination="@id/selectAgeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -20,27 +24,51 @@
         android:id="@+id/selectAgeFragment"
         android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.SelectAgeFragment"
         android:label="fragment_select_age"
-        tools:layout="@layout/fragment_select_age" >
+        tools:layout="@layout/fragment_select_age">
         <action
             android:id="@+id/action_selectAgeFragment_to_calculateFragment"
-            app:destination="@id/calculateFragment" />
+            app:destination="@id/calculateFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_selectAgeFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/calculateFragment"
         android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.CalculateFragment"
         android:label="fragment_calculate"
-        tools:layout="@layout/fragment_calculate" >
+        tools:layout="@layout/fragment_calculate">
         <action
             android:id="@+id/action_calculateFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_calculateFragment"
-            app:destination="@id/calculateFragment" />
+            app:destination="@id/calculateFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.javohirbekcoder.physicaldevelopmentcheck.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>
